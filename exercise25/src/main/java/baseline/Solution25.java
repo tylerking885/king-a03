@@ -5,10 +5,22 @@
 
 package baseline;
 
+import java.util.Scanner;
+
 public class Solution25 {
+    private static final Scanner in = new Scanner(System.in);
+
+    private char[] str1, str2;
+
     // In function readStringFromUser:
-    // Contains a prompt for user to enter a password.
-    // Reads in a string from the user.
+    private String readStringFromUser(String prompt) {
+
+        // Contains a prompt for user to enter a password.
+        System.out.print(prompt);
+
+        // Reads in a string from the user.
+        return in.nextLine();
+    }
 
     // In function public int passwordValidator:
     // The function is used to determine the strength of the entered password from user.
@@ -19,6 +31,9 @@ public class Solution25 {
     // Finally, check for special characters in the string. If this comes back true then add 1 more to strength counter.
 
     // In main:
+    public static void main(String[] args) {
+        Solution25 app = new Solution25();
+    }
     // If function passwordValidator returned a 0 then print the string entered by user with message "is a very weak password."
     // If function passwordValidator returned a 1 then print the string entered by user with message "is a weak password."
     // If function passwordValidator returned a 2 then print the string entered by user with message "is a strong password."
