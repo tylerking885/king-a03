@@ -67,19 +67,19 @@ public class Solution25 {
 
         app.str1 = app.readStringFromUser();
 
-        // If function passwordValidator returned a 0
+        // If function passwordValidator returned a 1
         if (app.passwordValidator(app.str1) == 1)
             System.out.printf("The password '%s' is a very weak password.", app.str1);
 
-        // If function passwordValidator returned a 1
+        // If function passwordValidator returned a 2
         if (app.passwordValidator(app.str1) == 2)
             System.out.printf("The password '%s' is a weak password.", app.str1);
 
-        // If function passwordValidator returned a 2
+        // If function passwordValidator returned a 3
         if (app.passwordValidator(app.str1) == 3)
             System.out.printf("The password '%s' is a strong password.", app.str1);
 
-        // If function passwordValidator returned a 3
+        // If function passwordValidator returned a 4
         if (app.passwordValidator(app.str1) == 4)
             System.out.printf("The password '%s' is a very strong password.", app.str1);
     }
