@@ -24,40 +24,57 @@ public class Solution25 {
 
     // In function public int passwordValidator:
     public int passwordValidator(String str1) {
-    /*  Separate approach:
+
         char ch;
-        boolean capitalFlag = false;
-        boolean lowerCaseFlag = false;
-        boolean numberFlag = false;
-        for(int i = 0; i < str1.length(); i++) {
-                ch = str1.charAt(i);
-                if( Character.isDigit(ch)) {
-                    numberFlag = true;
-                }
-                else if (Character.isUpperCase(ch)) {
-                    capitalFlag = true;
-                } else if (Character.isLowerCase(ch)) {
-                    lowerCaseFlag = true;
-                }
-                if(numberFlag && capitalFlag && lowerCaseFlag)
-                    return true;
-            }
-            return false;
-        } */
-    int strength = 0;
+        int capitalFlag = 0;
+        int lowerCaseFlag = 0;
+        int numberFlag = 0;
+        int strength = 0;
+        int specialFlag = 0;
+        String specialChars = "/*!@#$%^&*()\"{}_[]|\\?/<>,.";
+        String[] str2 = str1.split("");
+
+    // Loop through each character in the string.
+    for(int i = 0; i < str1.length(); i++) {
+
+        // returns a character at a specific position in string and sets it in ch.
+        ch = str1.charAt(i);
+
+        // Checks for a number, and flags when it finds one.
+        if (Character.isDigit(ch)) {
+            numberFlag = 1;
+
+        }
+        // Checks for an uppercase letter, and flags when it finds one.
+        else if (Character.isUpperCase(ch)) {
+            capitalFlag = 1;
+        }
+        // Checks for a lowercase letter, and flags when it finds one.
+        else if (Character.isLowerCase(ch)) {
+            lowerCaseFlag = 1;
+        }
+        // Checks for a special character, and flags when it finds one.
+        else if (specialChars.contains(str2[i])) {
+            specialFlag = 1;
+        }
+    }
 
     // If string length is less than 8 and contains only numbers, strength is 1.
-    if (str1.length() < 8 && str1.matches("[0-9]+"))
+    if ((str1.length() < 8) && numberFlag == 1)
         return strength + 1;
+
     // If string length is less than 8 and contains only letters, strength is 2.
-    else if (str1.length() < 8 && str1.matches("[a-zA-Z]+"))
+    else if ((str1.length() < 8) && (capitalFlag == 1 || lowerCaseFlag == 1))
         return strength + 2;
+
     // If string length is at least 8, contains at least one number and contains letters, strength is 3.
-    else if (str1.length() >= 8 && str1.matches("[a-zA-Z]+") && str1.matches("[0-9]+"))
+    else if ((str1.length() >= 8) && (capitalFlag == 1 || lowerCaseFlag == 1) && (numberFlag == 1) && (specialFlag == 0))
         return strength + 3;
+
     // If string length is at least 8, contains numbers, contains letters and special characters, strength is 4.
-    else if (str1.length() >= 8 && str1.matches("[a-zA-Z]+") && str1.matches("[0-9]+") && str1.matches("[`~!@#$%^&*()_+=]+"))
+    else if ((str1.length() >= 8) && (numberFlag == 1) && (specialFlag == 1) && (capitalFlag == 1 || lowerCaseFlag == 1) )
         return strength + 4;
+
     return strength;
     }
 
@@ -84,5 +101,3 @@ public class Solution25 {
             System.out.printf("The password '%s' is a very strong password.", app.str1);
     }
 }
-
-
