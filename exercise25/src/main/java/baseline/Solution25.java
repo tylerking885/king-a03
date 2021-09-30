@@ -12,7 +12,7 @@ public class Solution25 {
 
     private String str1;
 
-    // In function readStringFromUser:
+    // Returns a string.
     private String readStringFromUser() {
 
         // Contains a prompt for user to enter a password.
@@ -21,8 +21,7 @@ public class Solution25 {
         // Reads in a string from the user.
         return in.nextLine();
     }
-
-    // In function public int passwordValidator:
+    // Determines the strength of a given password and returns an integer accordingly.
     public int passwordValidator(String str1) {
 
         char ch;
@@ -78,7 +77,6 @@ public class Solution25 {
     return strength;
     }
 
-    // In main:
     public static void main(String[] args) {
         Solution25 app = new Solution25();
 
