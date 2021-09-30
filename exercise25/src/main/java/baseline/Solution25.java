@@ -12,13 +12,12 @@ public class Solution25 {
 
     private String str1;
 
-    // Returns a string.
     private String readStringFromUser() {
 
         // Contains a prompt for user to enter a password.
         System.out.print("Enter a password: ");
 
-        // Reads in a string from the user.
+        // Returns a string from the user.
         return in.nextLine();
     }
     // Determines the strength of a given password and returns an integer accordingly.
