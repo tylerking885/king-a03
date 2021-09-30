@@ -15,17 +15,13 @@ public class Solution24 {
     private char[] string1, string2;
     private String n1, n2;
 
-
-    // In function readStringFromUser:
     // Reads in two strings from the user.
-
     private char[] readStringFromUser(String prompt) {
         System.out.print(prompt);
         return in.next().toCharArray();
     }
 
-    // In function isAnagram:
-    // Takes in two character array parameters.
+    // Takes in two character array parameters and determines if they are anagrams.
     public boolean isAnagram(char[] string1, char[] string2) {
 
         // First the function will compare the lengths of the strings.
@@ -47,7 +43,7 @@ public class Solution24 {
         }
         return true;
     }
-    // In main:
+
     public static void main(String[] args) {
         Solution24 app = new Solution24();
 
