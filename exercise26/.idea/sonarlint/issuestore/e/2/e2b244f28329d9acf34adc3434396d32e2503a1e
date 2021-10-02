@@ -1,18 +1,3 @@
 
-S	java:S106"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
-T
-java:S1854#"7Remove this useless assignment to local variable "app".(è“ºƒ8´ÍÏ“Ã/
-E
-java:S1481#"(Remove this unused "app" local variable.(è“ºƒ8·ÍÏ“Ã/
-S	java:S106%"9Replace this use of System.out or System.err by a logger.(“š¦‚úÿÿÿÿ
-b
-java:S1104"MMake i a static final constant or non-public and provide accessors if needed.(¿úé
-h
-java:S1104"MMake b a static final constant or non-public and provide accessors if needed.( ¸ïøÿÿÿÿ
-h
-java:S1104"MMake p a static final constant or non-public and provide accessors if needed.(ÙÇ°¹şÿÿÿÿ
-o
-java:S1104*"MMake n a static final constant or non-public and provide accessors if needed.(‰«¢úÿÿÿÿ8İ†Ö“Ã/
-]
-java:S21848"@Cast one of the operands of this integer division to a "double".(ûÇë8¹Ì©“Ã/
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¼Åá„8·”âÅÃ/
