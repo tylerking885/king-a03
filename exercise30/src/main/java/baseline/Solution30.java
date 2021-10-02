@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution30
+ *  Copyright 2021 Tyler King
+ */
+
 package baseline;
 
 public class Solution30 {
