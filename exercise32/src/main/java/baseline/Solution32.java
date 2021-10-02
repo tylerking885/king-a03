@@ -84,5 +84,4 @@ public class Solution32 {
 
         return in.nextInt();
     }
-
 }
