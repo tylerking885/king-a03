@@ -21,17 +21,21 @@ public class Solution29 {
 
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
+
         boolean continueLoop = true;
 
-
         do{
-            try{
+            try{   // Prompt User for the rate.
                 System.out.print("What is the rate of return? ");
+
+                // Set r to user input.
                 int r = in.nextInt();
 
+                // Set years to InvestmentCalc method return.
                 int years = InvestmentCalc(r);
                 System.out.printf("It will take %d years to double your initial investment.", years);
 
+                // This will break the loop.
                 continueLoop = false;
             }
             // Handles a case where user enters anything other than integers.
