@@ -59,32 +59,43 @@ public class Solution27 {
         return empID.matches("[A-Z]{2}-[1-9]\\d{3}");
     }
 
-    public void validateInput(String nameFirst, String nameLast, String ZIP, String empID){
+    public void validateInput(String nameFirst, String nameLast, String ZIP, String empID) {
+        int errorCount = 0;
+        if (validateFirstNameFill(nameFirst)) {
 
-
-        if (validateFirstNameFill(nameFirst)){
             System.out.println("The first name must be filled in.");
-        }
-        if (validateMinLengthFirstName(nameFirst)){
-           System.out.println("The first name must be at least 2 characters long.");
-        }
-        if (validateMinLengthLastName(nameLast)){
-            System.out.println("The last name must be at least 2 characters long.");
-        }
-        if (validateLastNameFill(nameLast)){
+            errorCount ++;
+
+        } if (validateMinLengthFirstName(nameFirst)) {
+
+            System.out.println("The first name must be at least 2 characters long.");
+            errorCount ++;
+
+        } if (validateLastNameFill(nameLast)) {
+
             System.out.println("The last name must be filled in.");
-        }
-        if (!validateID(empID)){
+            errorCount ++;
+
+        } if (validateMinLengthLastName(nameLast)) {
+
+            System.out.println("The last name must be at least 2 characters long.");
+            errorCount ++;
+
+        } if (!validateID(empID)) {
+
             System.out.println("The employee ID must be in the format of AA-1234.");
-        }
-        if (!validateZipCode(ZIP)){
+            errorCount ++;
+
+        } if (!validateZipCode(ZIP)) {
+
             System.out.println("The zipcode must be a 5 digit number.");
-        }
-        else {
+            errorCount ++;
+
+        } if (errorCount == 0) {
+
             System.out.println("There were no errors found.");
         }
     }
-
     public static void main(String[] args) {
         Solution27 app = new Solution27();
 
@@ -94,6 +105,5 @@ public class Solution27 {
         app.empID = app.readStringFromUser("Enter the employee ID: ");
 
         app.validateInput(app.nameFirst, app.nameLast, app.ZIP, app.empID);
-
     }
 }
