@@ -25,7 +25,6 @@ public class Solution26 {
 
   // Prints the number of months based on the return of calcMonthsUntilPaidOff.
   System.out.printf("It will take you %d months to pay off this card.", object.calculateMonthsUntilPaidOff());
-
  }
 }
 
