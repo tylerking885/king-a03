@@ -56,10 +56,10 @@ public class Solution24 {
         if (app.isAnagram(app.string1, app.string2))
 
             // which will print the two anagram strings if true.
-            System.out.printf("%s and %s are anagrams.", app.n1, app.n2);
+            System.out.printf("\"%s\" and \"%s\" are anagrams.", app.n1, app.n2);
 
-        // Else will handle the false case.
+        // Else will print the false case.
         else
-            System.out.printf("%s and %s are not anagrams.", app.n1, app.n2);
+            System.out.printf("\"%s\" and \"%s\" are not anagrams.", app.n1, app.n2);
     }
 }
