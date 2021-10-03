@@ -6,14 +6,13 @@
 package baseline;
 
 public class Solution30 {
-
+int [][] array;
     public static void main(String[] args) {
+        Solution30 app = new Solution30();
 
-        int [][] array;
+        app.array = app.multiplicationTable(12,12);
 
-        array = multiplicationTable(12,12);
-
-        for (int[] ints : array) {
+        for (int[] ints : app.array) {
             for (int anInt : ints) {
                 System.out.printf(" %3d ", anInt);
             }
@@ -21,7 +20,7 @@ public class Solution30 {
         }
     }
     // A function will be used to multiply the indexes together and then stored into the 2d array.
-    public static int[][] multiplicationTable(int R, int C){
+    public int[][] multiplicationTable(int R, int C){
 
         int [][] array = new int[R][C];
 
