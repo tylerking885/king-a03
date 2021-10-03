@@ -21,7 +21,6 @@ public class Solution35 {
         ArrayList<String> contestants = new ArrayList<>();
 
         do {
-
             // Prompt for names of contestants until the user leaves the entry blank.
             app.name = app.readUserInput();
 
@@ -33,7 +32,6 @@ public class Solution35 {
             app.n = contestants.size();
 
         } while (!(app.name.equals("")));
-
 
         // Create a random number generator that will pick a winner from the array List.
         Random rand = new Random();
