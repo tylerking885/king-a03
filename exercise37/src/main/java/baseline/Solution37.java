@@ -26,7 +26,7 @@ public class Solution37 {
     static Random rand = new SecureRandom();
 
     public static void main(String[] args) {
-        Solution37Test app = new Solution37Test();
+        Solution37 app = new Solution37();
 
         // Prompt the user for a minimum password length.
         app.n = app.readIntFromUser("What's the minimum length? ");
@@ -34,7 +34,7 @@ public class Solution37 {
     }
 
     public static String getPassword(int length) {
-        Solution37Test obj = new Solution37Test();
+        Solution37 obj = new Solution37();
 
         // Prompt the user for number of special characters.
         obj.numSpecial = obj.readIntFromUser("How many special characters? ");
