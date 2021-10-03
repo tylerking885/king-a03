@@ -15,6 +15,25 @@ public class Solution24 {
     private char[] string1, string2;
     private String n1, n2;
 
+    public static void main(String[] args) {
+        Solution24 app = new Solution24();
+
+        app.string1 = app.readStringFromUser("Enter the first string: ");
+        app.n1 = valueOf(app.string1);
+        app.string2 = app.readStringFromUser("Enter the second string: ");
+        app.n2 = valueOf(app.string2);
+
+        // An if statement will use the function call isAnagram
+        if (app.isAnagram(app.string1, app.string2))
+
+            // which will print the two anagram strings if true.
+            System.out.printf("\"%s\" and \"%s\" are anagrams.", app.n1, app.n2);
+
+            // Else will print the false case.
+        else
+            System.out.printf("\"%s\" and \"%s\" are not anagrams.", app.n1, app.n2);
+    }
+
     // Reads in two strings from the user.
     private char[] readStringFromUser(String prompt) {
         System.out.print(prompt);
@@ -42,24 +61,5 @@ public class Solution24 {
             }
         }
         return true;
-    }
-
-    public static void main(String[] args) {
-        Solution24 app = new Solution24();
-
-        app.string1 = app.readStringFromUser("Enter the first string: ");
-        app.n1 = valueOf(app.string1);
-        app.string2 = app.readStringFromUser("Enter the second string: ");
-        app.n2 = valueOf(app.string2);
-
-        // An if statement will use the function call isAnagram
-        if (app.isAnagram(app.string1, app.string2))
-
-            // which will print the two anagram strings if true.
-            System.out.printf("\"%s\" and \"%s\" are anagrams.", app.n1, app.n2);
-
-        // Else will print the false case.
-        else
-            System.out.printf("\"%s\" and \"%s\" are not anagrams.", app.n1, app.n2);
     }
 }
