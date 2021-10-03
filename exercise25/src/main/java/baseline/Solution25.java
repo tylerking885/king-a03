@@ -41,16 +41,18 @@ public class Solution25 {
         // Checks for a number, and flags when it finds one.
         if (Character.isDigit(ch)) {
             numberFlag = 1;
-
         }
+
         // Checks for an uppercase letter, and flags when it finds one.
         else if (Character.isUpperCase(ch)) {
             capitalFlag = 1;
         }
+
         // Checks for a lowercase letter, and flags when it finds one.
         else if (Character.isLowerCase(ch)) {
             lowerCaseFlag = 1;
         }
+
         // Checks for a special character, and flags when it finds one.
         else if (specialChars.contains(str2[i])) {
             specialFlag = 1;
