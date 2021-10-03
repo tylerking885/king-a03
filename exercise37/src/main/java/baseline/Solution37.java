@@ -6,7 +6,6 @@
 package baseline;
 
 import java.security.SecureRandom;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Solution37 {
@@ -23,7 +22,7 @@ public class Solution37 {
     // Store set of numbers in a string array list.
     static char[] NUMBERS = "0123456789".toCharArray();
 
-    static Random rand = new SecureRandom();
+    static SecureRandom rand = new SecureRandom();
 
     public static void main(String[] args) {
         Solution37 app = new Solution37();
@@ -77,7 +76,7 @@ public class Solution37 {
         return new String(password);
     }
 
-    public int readIntFromUser(String prompt){
+    private int readIntFromUser(String prompt){
         System.out.print(prompt);
         return in.nextInt();
     }
