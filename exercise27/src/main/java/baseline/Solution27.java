@@ -24,37 +24,37 @@ public class Solution27 {
     }
 
     // Function to determine if a character was entered for first name.
-    public static boolean validateFirstNameFill(String nameFirst){
+    public boolean validateFirstNameFill(String nameFirst){
 
         return nameFirst.length() == 0;
     }
 
     // Function to determine if a character was entered for last name.
-    public static boolean validateLastNameFill(String nameLast){
+    public boolean validateLastNameFill(String nameLast){
 
         return nameLast.length() == 0;
     }
 
     // Function to determine if the length of the first name is at least 2.
-    public static boolean validateMinLengthFirstName(String nameFirst){
+    public boolean validateMinLengthFirstName(String nameFirst){
 
         return nameFirst.length() < 2;
     }
 
     // Function to determine if the length of the first name is at least 2.
-    public static boolean validateMinLengthLastName(String nameLast){
+    public boolean validateMinLengthLastName(String nameLast){
 
         return nameLast.length() < 2;
     }
 
     // Function to determine if the user entered numbers for the zip.
-    public static boolean validateZipCode(String ZIP){
+    public boolean validateZipCode(String ZIP){
 
         return ZIP.matches("\\d{5}");
     }
 
     // Function to determine if the user entered the employee ID in the format AA-1234.
-    public static boolean validateID(String empID){
+    public  boolean validateID(String empID){
 
         return empID.matches("[A-Z]{2}-[1-9]\\d{3}");
     }
