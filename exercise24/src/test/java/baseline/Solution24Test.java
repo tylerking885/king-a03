@@ -25,5 +25,4 @@ class Solution24Test {
         assertFalse(actual_value2, String.valueOf(0.000001));
     }
 
-
 }
