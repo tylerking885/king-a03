@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Solution29 {
 
     // Demonstrates throwing an exception when a division by 0 occurs.
-    public static int InvestmentCalc(int r)
+    public int investmentCalc(int r)
         throws ArithmeticException{
 
         // Here is where the possible incorrect inputs will occur.
@@ -20,7 +20,9 @@ public class Solution29 {
     }
 
     public static void main(String[] args){
+        Solution29 app = new Solution29();
         Scanner in = new Scanner(System.in);
+
 
         boolean continueLoop = true;
 
@@ -32,7 +34,8 @@ public class Solution29 {
                 int r = in.nextInt();
 
                 // Set years to InvestmentCalc method return.
-                int years = InvestmentCalc(r);
+
+                Object years = app.investmentCalc(r);
                 System.out.printf("It will take %d years to double your initial investment.", years);
 
                 // This will break the loop.
