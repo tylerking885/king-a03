@@ -8,6 +8,26 @@ package baseline;
 import java.util.Scanner;
 
 public class Solution26 {
+ double b, i, p;
+
+ public static void main(String[] args) {
+  PaymentCalculator object = new PaymentCalculator();
+
+  // User will be prompted to enter their balance of credit card.
+  object.b = object.readDoubleFromUser("What is your balance? ");
+
+  // User will be prompted to enter their apr as a percentage.
+  object.i = ((object.readDoubleFromUser("What is the APR on the card (as a percent)? ")) / 100) / 365;
+
+  // User will be prompted to enter their monthly payment.
+  object.p = object.readDoubleFromUser("What is the monthly payment you can make? ");
+
+  // Prints the number of months based on the return of calcMonthsUntilPaidOff.
+  System.out.printf("It will take you %d months to pay off this card.", object.calculateMonthsUntilPaidOff(object.b, object.i, object.p));
+ }
+}
+
+class PaymentCalculator extends Solution26 {
  private static final Scanner in = new Scanner(System.in);
 
  // In function readIntFromUser:
@@ -20,30 +40,10 @@ public class Solution26 {
   return in.nextDouble();
  }
 
- public static void main(String[] args) {
-  PaymentCalculator object = new PaymentCalculator();
-
-  // Prints the number of months based on the return of calcMonthsUntilPaidOff.
-  System.out.printf("It will take you %d months to pay off this card.", object.calculateMonthsUntilPaidOff());
- }
-}
-
-class PaymentCalculator extends Solution26 {
-
   // Returns the number of months left to pay off.
-  public int calculateMonthsUntilPaidOff() {
-   PaymentCalculator pay = new PaymentCalculator();
+  public int calculateMonthsUntilPaidOff(double b, double i, double p) {
 
-   // User will be prompted to enter their balance of credit card.
-   double b = pay.readDoubleFromUser("What is your balance? ");
-
-   // User will be prompted to enter their apr as a percentage.
-   double i = ((pay.readDoubleFromUser("What is the APR on the card (as a percent)? ")) / 100) / 365;
-
-   // User will be prompted to enter their monthly payment.
-   double p = pay.readDoubleFromUser("What is the monthly payment you can make? ");
-
-                 // Formula for determining number of months to pay credit card off.
+   // Formula for determining number of months to pay credit card off.
    return (int) Math.ceil(((Math.log(1 + (b / p) * (1 - Math.pow((1 + i), 30)))) / (Math.log(1 + i))) / -30);
   }
 }
