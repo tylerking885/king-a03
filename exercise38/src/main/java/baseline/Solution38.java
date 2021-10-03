@@ -12,45 +12,64 @@ public class Solution38 {
 
     private String numbers;
     private String[] numbersArray;
-    private int n;
+    private int[] printEvenList;
+    int n;
 
-    // Prompt for a list of numbers, separated by spaces.
+    public static void main(String[] args) {
+        Solution38 app = new Solution38();
+
+        // Prompt for a list of numbers, separated by spaces.
+        app.numbers = app.readUserInput();
+
+        // Convert the input to an array eliminating spaces.
+        app.numbersArray = app.numbers.split(" ");
+
+        // Setting printEvenList to filterEvenNumbers return value.
+        app.printEvenList = app.filterEvenNumbers(app.numbersArray);
+
+        System.out.print("The even numbers are");
+
+        // Iterate through new array and print each value.
+        for (int i = 0; i < app.n; i++){
+            System.out.printf(" %d", app.printEvenList[i]);
+        }
+
+        System.out.print(".");
+    }
+
     String readUserInput(){
         System.out.print("Enter a list of numbers, separated by spaces: ");
 
         return in.nextLine();
     }
 
-    public static void main(String[] args) {
-        Solution38 app = new Solution38();
-
-        app.numbers = app.readUserInput();
-
-        // Convert the input to an array.
-        app.numbersArray = app.numbers.split(" ");
-
-        // Have the program print out a new list containing only the even numbers.
-        for (int i = 0; i < app.n; i++) {
-            System.out.printf("The even numbers are %s", (Object) app.filterEvenNumbers(app.numbersArray));
-        }
-
-    }
-    // Use a function called filterEvenNumbers to encapsulate the logic for this.
-    // The function takes in the original array and returns the new array.
+    // The function takes in the original array.
     int[] filterEvenNumbers(String[] numbersArray){
-        Solution38 obj = new Solution38();
 
         int[] evenList = new int[numbersArray.length];
         int[] printEvenList = new int[numbersArray.length];
-        for (int i = 0; i < numbersArray.length; i++){
+        int j = 0;
 
+        // Iterate through original array.
+        for (int i = 0; i < numbersArray.length; i++) {
+
+            // Parse the string values into integers.
             evenList[i] = Integer.parseInt(numbersArray[i]);
-            if (evenList[i] %2 == 0){
 
-                printEvenList[i] = evenList[i];
+            // The if statement checks for even numbers.
+            if (evenList[i] %2 == 0) {
+
+                // When found store the even value in index j.
+                printEvenList[j] = evenList[i];
+
+                // Increment index after storing.
+                j++;
             }
         }
-        obj.n = printEvenList.length;
+        // Set global variable n to j the number of even elements.
+        n = j;
+
+        // Return the new array.
         return printEvenList;
     }
 }
