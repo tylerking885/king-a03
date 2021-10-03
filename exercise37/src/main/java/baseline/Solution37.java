@@ -1,5 +1,5 @@
 /*
- *  UCF COP3330 Fall 2021 Assignment 3 Solution38
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution37
  *  Copyright 2021 Tyler King
  */
 
@@ -76,7 +76,7 @@ public class Solution37 {
         }
         return new String(password);
     }
-    
+
     public int readIntFromUser(String prompt){
         System.out.print(prompt);
         return in.nextInt();
