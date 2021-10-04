@@ -13,8 +13,15 @@ public class Solution28 {
     private String Number;
     private int number;
 
+    // The total will be printed at the end in main.
+    public static void main(String[] args) {
+        Solution28 obj = new Solution28();
+
+        System.out.printf("The total is %.0f.", obj.calcSum());
+    }
+
     // Prompts user for number and returns said number.
-    private int getNumber(){
+    public int getNumber(){
         Solution28 application = new Solution28();
         System.out.print("Enter a number: ");
 
@@ -25,7 +32,7 @@ public class Solution28 {
         application.number = Integer.parseInt(application.Number);
 
         return application.number;
-        }
+    }
 
     // Calculates and returns a sum.
     public double calcSum(){
@@ -40,11 +47,5 @@ public class Solution28 {
 
         }
         return sum;
-    }
-    // The total will be printed at the end in main.
-    public static void main(String[] args) {
-        Solution28 obj = new Solution28();
-
-        System.out.printf("The total is %.0f.", obj.calcSum());
     }
 }
