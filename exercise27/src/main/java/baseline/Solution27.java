@@ -13,6 +13,17 @@ public class Solution27 {
 
     private String nameFirst, nameLast, ZIP, empID;
 
+    public static void main(String[] args) {
+        Solution27 app = new Solution27();
+
+        app.nameFirst = app.readStringFromUser("Enter the first name: ");
+        app.nameLast = app.readStringFromUser("Enter the last name: ");
+        app.ZIP = app.readStringFromUser("Enter the ZIP code: ");
+        app.empID = app.readStringFromUser("Enter the employee ID: ");
+
+        app.validateInput(app.nameFirst, app.nameLast, app.ZIP, app.empID);
+    }
+
     // Function that returns a string which will prompt user for certain entries.
     private String readStringFromUser(String prompt) {
 
@@ -95,15 +106,5 @@ public class Solution27 {
 
             System.out.println("There were no errors found.");
         }
-    }
-    public static void main(String[] args) {
-        Solution27 app = new Solution27();
-
-        app.nameFirst = app.readStringFromUser("Enter the first name: ");
-        app.nameLast = app.readStringFromUser("Enter the last name: ");
-        app.ZIP = app.readStringFromUser("Enter the ZIP code: ");
-        app.empID = app.readStringFromUser("Enter the employee ID: ");
-
-        app.validateInput(app.nameFirst, app.nameLast, app.ZIP, app.empID);
     }
 }
